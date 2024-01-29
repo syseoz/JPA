@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: inf_jpa_user
+    password: 1234
+    url: jdbc:mariadb://localhost:3306/inf_jpa_shop
+
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        #show_sql: true  system.out
+        format_sql: true
+
+logging:
+  level:
+    org.hibernate.sql: debug  #log
+    org.hibernate.orm.jdbc.bind: trace
